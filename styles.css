@@ -1,0 +1,181 @@
+@import "compass/css3";
+body {
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    }
+
+
+
+
+
+
+    :root {
+        --shadow-color: grey;
+        --shadow-color-light: white;
+      }
+      
+
+      .logo-1 {
+        color: #f0f0ef;
+        animation: neon 3s infinite;
+        font-size: 3vw;
+        font-family: "Archivo Black", "Archivo", sans-serif;
+        height: auto;
+        width: auto;
+        text-align: center;
+        border: 3px solid #333333;
+        max-width: max-content;
+        margin: auto;
+        padding: 10px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        cursor: default;
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        background-color: grey;
+      }
+      
+      @keyframes neon {
+        0% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+          0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+          0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+        }
+        50% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+          0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+          0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+        }
+        100% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+          0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+          0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+        }
+      }
+
+      .sketchy {
+        border: 3px solid #333333;
+        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        letter-spacing: 0.3ch;
+    }
+
+
+    .button__holder{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+      .button__holder:after{
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: 0; right: 0; bottom: 0; left: 0;
+      }
+
+  .plus{
+      position: relative;
+      z-index: 1;
+      width: 80px;
+      height: 80px;
+      color: #1a1a1a;
+      background-color: #000000;
+      background-image: linear-gradient(315deg, #000000 0%, #999999 74%);
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+    }
+      .plus:after{
+          content: "Project";
+          font-size: 1em;
+          color: white;
+      }
+      .plus:hover{
+          transform: scale(1.25);
+          box-shadow: 2px 2px 3px 3px;
+      }
+
+      .arrow {
+        box-sizing: border-box;
+        height: 5vw;
+        width: 5vw;
+        border-style: solid;
+        border-color: white;
+        border-width: 0px 6px 6px 0px;
+        transform: rotate(45deg);
+        transition: border-width 150ms ease-in-out;
+        margin-top: 45px;
+      }
+      
+      
+
+      .arrow:hover {
+        border-bottom-width: 10px;
+        border-right-width: 10px;
+      }
+      
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        background-color: #f3f4f7;
+        background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+        border-radius: 8px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .aboutMe {
+        text-align: center;
+      }
+
+      .img {
+        display: block;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
